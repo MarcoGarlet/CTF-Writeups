@@ -1,4 +1,4 @@
-# PwnWriteUps
+# CTF-WriteUps
 
 <h2>Narnia</h2>
 http://overthewire.org/wargames/narnia/
