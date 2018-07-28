@@ -1,4 +1,4 @@
-# CTF-WriteUps
+# CTF-Writeups
 
 <h2>Narnia</h2>
 <p>http://overthewire.org/wargames/narnia/</p>
