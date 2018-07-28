@@ -2,6 +2,7 @@
 
 <h2>Narnia</h2>
 http://overthewire.org/wargames/narnia/
+<a href = "https://github.com/MarcoGarlet/CTF-WriteUps/blob/master/narnia/narnia.txt">Solutions</a>
 <h2>Behemoth</h2>
   http://overthewire.org/wargames/behemoth/
 <h2>Netgarage</h2>
