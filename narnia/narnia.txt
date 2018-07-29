@@ -304,7 +304,7 @@ int main(int argc, char **argv){
 
 The snprintf in this exercise suffers of format string vulnerability, so to complete this level I use that attack to set the correct value to i variable.
 The program displays i variable address and it never changes because there is no ASLR.
-So I decided to perform format string attack with direct write technique.
+So I decided to perform format string attack with direct parameter access.
 
 Notice that we can write format string in argv[1] and with sprints we are able to write everywhere in memory.
 
@@ -450,7 +450,7 @@ int hackedfunction(){
 
 This level consists in a format string attack. 
 
-I used DMA to perform a format string attack then, with a copy of SUID program in "/tmp/cc", I generated a core dump file in order to set the string passed as argument.
+I used DPA to perform a format string attack then, with a copy of SUID program in "/tmp/cc", I generated a core dump file in order to set the string passed as argument.
 
 ./narnia7 $(python -c 'print "\x7c\xd4\xff\xff"*18+"\x7d\xd4\xff\xff"+"\x7e\xd4\xff\xff"+"\x7f\xd4\xff\xff"+"aa%23$n"+"aaaa"*12+"a"+"%24$n"+"bbbb"*31+"b"+"%25$n"+"aaaa"+"%26$n"')
 
