@@ -5,6 +5,7 @@
 <p><a href = "https://github.com/MarcoGarlet/CTF-WriteUps/blob/master/narnia/narnia.txt">Solutions</a></p>
 <h2>Behemoth</h2>
 <p>http://overthewire.org/wargames/behemoth/</p>
+<p><a href = "https://github.com/MarcoGarlet/CTF-Writeups/blob/master/behemoth/Behemoth.txt">Solutions</a></p>
 <h2>Netgarage</h2>
 <p>https://io.netgarage.org/</p>
 <h2>NewbieContest</h2>
