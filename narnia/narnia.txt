@@ -362,7 +362,7 @@ int main(int argc, char *argv[]){
 The vulnerability is obviously in strcpy function that allows us to copy from argv to b1 and b2 arrays.
 
 So after few attempts I realized that I can, for some reason, overwrite the fp function pointer.
-In gdb I realised that the b2 array, which correspond to argv[2], can overwrites in some way fp pointer.
+In gdb I realized that the b2 array, which correspond to argv[2], can overwrites in some way fp pointer.
 
 Let's explore what happens in gdb:
 
