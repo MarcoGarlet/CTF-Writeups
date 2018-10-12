@@ -10,5 +10,9 @@
 <p>https://io.netgarage.org/</p>
 <h2>NewbieContest</h2>
 <p>https://www.newbiecontest.org/</p>
+<p><a href = "https://github.com/MarcoGarlet/CTF-Writeups/tree/master/newbie/wargame">Solutions</a></p>
 <h2>Pwnable.kr</h2>
 <p>http://pwnable.kr/</p>
+<h2>picoCTF2018</h2>
+<p>https://picoctf.com/</p>
+<p><a href = "https://github.com/MarcoGarlet/CTF-Writeups/tree/master/picoCTF2018">Solutions</a></p>
