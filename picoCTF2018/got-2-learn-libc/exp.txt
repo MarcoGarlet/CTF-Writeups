@@ -48,10 +48,11 @@ int main(int argc, char **argv){
 The program print out some libc addresses and ponter of /bin/sh string.
 
 
-So to exploit this program i decided to looking for a magic gadget!
+So to exploit this program I decided to looking for a magic gadget!
 
 With libc_db, given the last 4 bytes of libc functions, I obtained version running by the vuln program. 
 I used ropper and I obtained different magic gadget, I just tried with first one.
+
 
 flag: picoCTF{syc4al1s_4rE_uS3fUl_bd99244d}
 
