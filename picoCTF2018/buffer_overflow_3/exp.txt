@@ -80,9 +80,9 @@ int main(int argc, char **argv){
 In vuln function there's a sort of canary that will be checked before ret.
 This canary is read from canary.txt file without specifying absolute path.
 
-So we can export PATH with working directory in order to call vuln program from every directory.
+Export PATH with working directory in order to call vuln program from every directory.
 
-Then I place in a /tmp directory my own canary.txt file with simply "aaaa" as content and a symbolic link to the flag.
+Then place in a /tmp directory a canary.txt file with simply "aaaa" as content and a symbolic link to the flag.
 
 In this tmp dir is possible call suid program without specifing path and the canary value will be taken from my file, so here I can perform a simple BO in order to overwrite RA and execute win function.
  
