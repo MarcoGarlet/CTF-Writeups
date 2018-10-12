@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-
+# use socat to run vuln program and make it listen on 2323 port
 import time, sys, socket, telnetlib
 from struct import *
 
