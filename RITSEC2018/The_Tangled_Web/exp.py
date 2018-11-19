@@ -7,7 +7,7 @@ def gets_url_lists(url,exp):
     page1=str(f.read())
     page1=page1.replace("\\n","\n")
     for line in page1.split():
-        if "Flag" in line:
+        if "flag" in line.lower():
             print(line)
             print(page1)
             exit()
