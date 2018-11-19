@@ -1,4 +1,4 @@
-I made this simple python script that for each html pages explored, store in a list all "href" and a "true/false" value to check if a path was yet explored.
+I made this simple python program that for each html pages explored store in a list all "href" and a "true/false" value to check if a node was yet visited.
 The script searched for "Flag" in a web page and printed it out, so returned "Fl4gggg1337.html" pages but without what we wanted. 
 Inside "Fl4gggg1337.html" I noticed a link called "!" to "Stars.html" page. Inside that page I noticed a paragraph with this base64 string:
 
