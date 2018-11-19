@@ -1,7 +1,9 @@
-I made this simple python script that for each html pages explored, store in a list all "href" and a "true/false" value to check if a path was yet explored. The script searched for "Flag" in a web page and print out the flag. So the script retured 'Fl4gggg1337.html' pages but with no flag inside: a quite strange things for that page is a link called "!" to Stars.html page. Inside that page I noticed a quite strange paragrapher with this base64 string:
+I made this simple python script that for each html pages explored, store in a list all "href" and a "true/false" value to check if a path was yet explored.
+The script searched for "Flag" in a web page and printed it out, so returned "Fl4gggg1337.html" pages but without what we wanted. 
+Inside "Fl4gggg1337.html" I noticed a link called "!" to "Stars.html" page. Inside that page I noticed a paragraph with this base64 string:
 
 UklUU0VDe0FSM19ZMFVfRjMzNzFOR18xVF9OMFdfTVJfS1I0QjU/IX0=
 
-and after decode we had the flag:
+and after decode I had the flag:
 
 FLAG:RITSEC{AR3_Y0U_F3371NG_1T_N0W_MR_KR4B5?!}
