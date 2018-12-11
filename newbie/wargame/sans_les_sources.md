@@ -1,9 +1,8 @@
-/home/level09/.password
+## exploit
 
-/usr/local/bin:/bin:/usr/local/games:/usr/games:/tmp/attack:/usr/bin
 
 We've got only ELF file and we must find right vuln. to read .password file
-
+```assembly
 	08048464 <main>:
 	 8048464:	55                   	push   %ebp
 	 8048465:	89 e5                	mov    %esp,%ebp
@@ -41,14 +40,14 @@ We've got only ELF file and we must find right vuln. to read .password file
 	 80484eb:	b8 00 00 00 00       	mov    $0x0,%eax
 	 80484f0:	c9                   	leave  
 	 80484f1:	c3                   	ret
-
+```
 As we can see is required one argument.
-We can notice that the program performs a call to system("clear") without specifying absolute path.
+We can notice that the program performs a call to `system("clear")` without specifying absolute path.
 So the idea is to:
-	1 find a way to reach that system
-	2 put a clear.c program in tmp that cat the flag
-	3 exporting in PATH env var before "usr/bin" our "tmp" directory
-	4 execute suid program
+* find a way to reach that system
+* put a clear.c program in tmp that cat the flag
+* exporting in PATH env var before `usr/bin` our `tmp` directory
+* execute suid program
 
 The program takes the least 16 bits of the integer that represent length of our argument.
 These bits are treat as signed bit, so we have the last bit as sign.
@@ -57,20 +56,20 @@ If these bits represent non-positive number, then the execution continue and the
 
 
 
-I obtain, with "which" command, the path of "clear" command(/usr/bin).
-Then we create in "/tmp/ourdir" a .c file named "clear" which contains a system with "cat /home/level09/.password" argument.
+I obtain, with `which` command, the path of `clear` command(/usr/bin).
+Then we create in `/tmp/ourdir` a `.c` file named `clear` which contains a system with `cat /home/level09/.password` argument.
 
 
-We can exploit the program: export PATH env. variable and put /tmp/ourdir before /usr/bin.
-The idea is that when SUID program perform "clear" with system, will search first in our directory and will find a clear binary that perform a cat to flag file.
+We can exploit the program: export PATH env. variable and put `/tmp/ourdir` before `/usr/bin`.
+The idea is that when SUID program perform `clear` with `system`, will search first in our directory and will find a clear binary that perform a cat to flag file.
 
 
 So we go back in ur directory and we launch:		
-				
-					"./bin09 $(python -c 'print "a"*65535')"
+```bash
+$ ./bin09 $(python -c 'print "a"*65535')
+```
 
-
-The flag is "#FAILstrlen#F411"
+##### flag: "#FAILstrlen#F411"
 
 	
 
