@@ -207,7 +207,7 @@ Now we make `/tmp/exploit` folder in which we create the symbolic link to the fl
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-narnia4 -> narnia5
+## narnia4 -> narnia5
 
 ```C
 #include <string.h>
