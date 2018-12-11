@@ -1,7 +1,7 @@
 ## exploit
 
 
-We've got only ELF file and we must find right vuln. to read .password file
+We've got only ELF file and we must find right vuln. to read `.password` file
 ```assembly
 	08048464 <main>:
 	 8048464:	55                   	push   %ebp
