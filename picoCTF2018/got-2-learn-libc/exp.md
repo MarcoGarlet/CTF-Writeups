@@ -1,3 +1,5 @@
+## exploit
+```C
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -44,8 +46,8 @@ int main(int argc, char **argv){
   return 0;
 }
 
-
-The program print out some libc addresses and ponter of /bin/sh string.
+```
+The program print out some libc addresses and ponter of `/bin/sh` string.
 
 
 So to exploit this program I decided to looking for a magic gadget!
@@ -54,7 +56,7 @@ With libc_db, given the last 4 bytes of libc functions, I obtained version runni
 I used ropper and I obtained different magic gadget, I just tried with first one.
 
 
-flag: picoCTF{syc4al1s_4rE_uS3fUl_bd99244d}
+##### flag: picoCTF{syc4al1s_4rE_uS3fUl_bd99244d}
 
 
 
