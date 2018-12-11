@@ -39,7 +39,7 @@ Obviusly I focused on vuln function.
 
 I decided for this exploit to make a rop chain that:
 * call setresgid with correct id in order to drop the right privileges to read the flag file
-* call `mprotect` function in order to get heap space `RWX`
+* call `mprotect` function in order to get bss section `RWX`
 * call `gets` function and pass shellcode in the area passed as argument to mprotect function
 * insert shellcode via stdin
 
@@ -54,7 +54,7 @@ So here some addresses:
 	0804f120 - gets
 ```
 
-To bypass nx bit I decided to makes the first 0x100 bytes of the heap rwx starting from `0x080e0000`.
+To bypass NX bit I decided to makes the first 0x100 bytes of the bss rwx starting from `0x080e0000`.
 
 The next gets function takes this address as arguments and via stdin passed the shellcode that simply execve `/bin/sh`.
 
