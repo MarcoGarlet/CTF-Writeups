@@ -48,7 +48,7 @@ a7825
 ```
 So we could for istance try to write printf GOT entry in order to call system instead of printf but I considered that: 
 
-* No checks boundary are performed after gets is permormed
+* No checks boundary are performed after gets
 * The absence of canary permit to perform ret2libc to system passing `sh` string as argument
 
 The exploit:
