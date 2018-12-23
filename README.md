@@ -17,3 +17,6 @@
 <h1>RITSEC CTF 2018</h1>
 <p/><a href="https://ctf.ritsec.club/">Site</a>
 <p/><a href="https://github.com/MarcoGarlet/CTF-Writeups/tree/master/RITSEC2018">Writeups</a>
+<h1>xmas ctf 2018</h1>
+<p/><a href="https://www.xmas-ctf.cf/">Site</a>
+<p/><a href="https://github.com/MarcoGarlet/CTF-Writeups/tree/master/xmas-ctf-2018">Writeups</a>
