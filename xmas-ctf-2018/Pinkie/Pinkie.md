@@ -13,7 +13,7 @@ info symbol 0x8049940
 section .bss of /home/vagrant/share/xmasCTF/Pinkie/pinkiegift.dms
 
 gdb-peda$ x/40wx 0x8049940
-0x8049940 <binsh>:	    0x00000000	0x00000000	0x00000000	0x00000000
+0x8049940 <binsh>   :	0x00000000	0x00000000	0x00000000	0x00000000
 0x8049950 <binsh+16>:	0x00000000	0x00000000	0x00000000	0x00000000
 0x8049960 <binsh+32>:	0x00000000	0x00000000	0x00000000	0x00000000
 0x8049970 <binsh+48>:	0x00000000	0x00000000	0x00000000	0x00000000
@@ -48,7 +48,7 @@ a7825
 ```
 So we could for istance try to write printf GOT entry in order to call system instead of printf but I considered that: 
 
-* No checks boundary are performed after gets is permormed
+* No checks boundary are performed after gets
 * The absence of canary permit to perform ret2libc to system passing `sh` string as argument
 
 The exploit:
