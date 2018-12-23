@@ -24,8 +24,7 @@ gdb-peda$ x/40wx 0x8049940
 
 Normally the `bss` section is not executable, it could be useful in order to place some shellcode but require a previous call to `mprotect` to execute that, or I could write with `gets` or other libc function some bytes and obtain all strings I need. 
 
-The second gift is a real gift! An address to libc `system` procedure. So now i could try to search in `text` or `data` or `bss` section an `sh` strings and exploit executable without using the first gift. Moreover we can notice from the output of remote program, that ASLR is disabled, `system` is placed at the same address.
-
+The second gift is a real gift! An address to libc `system` procedure. So now i could try to search in `text` or `data` or `bss` section (not affected by ASLR) an `sh` strings and exploit executable without using the first gift. Moreover we can notice from the output of remote program, that ASLR is enabled.
 
 Ok now I only have to figure out where vulnerability is, with checksec we can see the following:
 
