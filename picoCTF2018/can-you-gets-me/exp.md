@@ -49,7 +49,7 @@ from ropper I selected one gadget that simply performs 3 `pop` and one `ret`, in
 So here some addresses: 
 ```
 	0806cc40 - setresgid
-	0806f050 - pop pop pop ret gadget - used between the calls to clean stak layout.
+	0806f050 - pop pop pop ret gadget - used between the calls to clean stack layout.
 	0806e0f0 - mprotect
 	0804f120 - gets
 ```
