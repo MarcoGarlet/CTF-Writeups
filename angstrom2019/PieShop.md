@@ -73,7 +73,7 @@ $ cat /proc/sys/kernel/randomize_va_space
 
 This combination was terrible especially with PIE code:
 
-this kind of protection makes unpredicatble where code segment were loaded changing every time we execute binary. Of course the offsets, in the code section, remained the same. For istance we knew that the offset of `flag` function ends with `1a9`, the `gets_pie` with `1bc` etc.
+this kind of protection makes unpredictable where code segment were loaded changing every time we execute binary. Of course the offsets, in the code section, remained the same. For istance we knew that the offset of `flag` function ends with `1a9`, the `gets_pie` with `1bc` etc.
 
 I explored two alternativies:
 
