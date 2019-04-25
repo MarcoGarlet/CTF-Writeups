@@ -73,7 +73,7 @@ $ cat /proc/sys/kernel/randomize_va_space
 
 This combination was terrible especially with PIE code:
 
-this kind of protection makes unpredicatble where code segment were loaded and change every time we execute binary. Of course the offsets, in the code section, remain the same. For istance we know that the offset of `flag` function ends with `1a9`, the `gets_pie` with `1bc` etc.
+this kind of protection makes unpredicatble where code segment were loaded changing every time we execute binary. Of course the offsets, in the code section, remained the same. For istance we knew that the offset of `flag` function ends with `1a9`, the `gets_pie` with `1bc` etc.
 
 I explored two alternativies:
 
@@ -91,7 +91,8 @@ I explored two alternativies:
 	* __NR_gettimeofday
 	* __NR_time
 	* __NR_getcpu
-        here maybe the interesting gadget could be RET but we are already able to jump at any location
+        
+	here maybe the interesting gadget could be RET but we are already able to jump at any location
 
 
 
@@ -102,7 +103,7 @@ I explored two alternativies:
     However:
     The goal is jump into `flag` procedure. Without overflow anything, the stack frame in `gets_pie` procedure contained RA to main procedure. So `5` of these bytes - the most significant ones - were the same as `flag` procedure, the problem was the less significant 3 bytes.
     
-    Of these 3 bytes the least significant one was always `a9`, so remains 16 bit to guess and 8 of these (that i wasn't able to control) were: `0x00`. 
+    Of these 3 bytes the least significant one was always `a9`, so remained 16 bit to guess and 8 of these (that i wasn't able to control) were: `0x00`. 
     
     The goal at this point was to find at least one execution that had `flag` procedure loaded into an address that ends with: `....0011a9`
 
