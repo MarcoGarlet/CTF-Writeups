@@ -88,9 +88,9 @@ I explored two alternativies:
 
 
 2. the syscall inside this pages are:
-        * __NR_gettimeofday
-        * __NR_time
-        * __NR_getcpu
+	* __NR_gettimeofday
+	* __NR_time
+	* __NR_getcpu
         here maybe the interesting gadget could be RET but we are already able to jump at any location
 
 
