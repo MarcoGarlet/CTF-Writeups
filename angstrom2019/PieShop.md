@@ -75,7 +75,7 @@ This combination was terrible especially with PIE code:
 
 this kind of protection makes unpredictable where code segment were loaded changing every time we execute binary. Of course the offsets, in the code section, remained the same. For istance we knew that the offset of `flag` function ends with `1a9`, the `gets_pie` with `1bc` etc.
 
-I explored two alternativies:
+I explored two alternatives:
 
 *  ### ret2vsyscall
 
