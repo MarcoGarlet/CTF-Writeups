@@ -23,3 +23,6 @@
 <h1>ångstromCTF 2019</h1>
 <p/><a href="https://2019.angstromctf.com">Site</a>
 <p/><a href="https://github.com/MarcoGarlet/CTF-Writeups/tree/master/angstrom2019">Writeups</a>
+<h1>HSCTF 6</h1>
+<p/><a href="https://ctf.hsctf.com">Site</a>
+<p/><a href="https://github.com/MarcoGarlet/CTF-Writeups/tree/master/HSCTF6">Writeups</a>
