@@ -8,6 +8,7 @@ for i in range(len(out)):
   for c in string.ascii_letters+string.digits+'{}_': 
     chr_c = pow(ord(c), e, N)
     if int(out[i])==chr_c:
-      print('{}'.format(c),end='')    
+      print('{}'.format(c),end='')  
+      break  
 print()
 #TWCTF{padding_is_important}
