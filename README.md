@@ -26,3 +26,6 @@
 <h1>HSCTF 6</h1>
 <p/><a href="https://ctf.hsctf.com">Site</a>
 <p/><a href="https://github.com/MarcoGarlet/CTF-Writeups/tree/master/HSCTF6">Writeups</a>
+<h1>TokyoWesterns CTF 5th 2019</h1>
+<p/><a href="https://ctf.westerns.tokyo">Site</a>
+<p/><a href="https://github.com/MarcoGarlet/CTF-Writeups/tree/master/TokyoWesterns2019">Writeups</a>
