@@ -10,3 +10,4 @@ for i in range(len(out)):
     if int(out[i])==chr_c:
       print('{}'.format(c),end='')    
 print()
+#TWCTF{padding_is_important}
