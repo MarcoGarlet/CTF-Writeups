@@ -29,3 +29,6 @@
 <h1>TokyoWesterns CTF 5th 2019</h1>
 <p/><a href="https://ctf.westerns.tokyo">Site</a>
 <p/><a href="https://github.com/MarcoGarlet/CTF-Writeups/tree/master/TokyoWesterns2019">Writeups</a>
+<h1>replyctf 2019</h1>
+<p/><a href="https://challenges.reply.com/tamtamy/challenge/external-ctf-2019/detail">Site</a>
+<p/><a href="https://github.com/MarcoGarlet/CTF-Writeups/tree/master/reply2019">Writeups</a>
