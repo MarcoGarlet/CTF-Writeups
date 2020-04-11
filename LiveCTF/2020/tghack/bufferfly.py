@@ -1,5 +1,5 @@
+# TG20{she_mprotec_but_she_also_matac}
 from pwn import *
-# libc-remote.so  libc.so.6
 local= False
 
 
