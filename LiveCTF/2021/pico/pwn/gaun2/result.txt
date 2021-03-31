@@ -1,0 +1,12 @@
+[x] Opening connection to mercury.picoctf.net on port 48015
+[x] Opening connection to mercury.picoctf.net on port 48015: Trying 18.189.209.142
+[+] Opening connection to mercury.picoctf.net on port 48015: Done
+[*] 7fff829d4a88
+[*] 0x7fff829d4934
+b'2adf061572f988608288dcbc11a83841\n'
+[x] Opening connection to mercury.picoctf.net on port 48015
+[x] Opening connection to mercury.picoctf.net on port 48015: Trying 18.189.209.142
+[+] Opening connection to mercury.picoctf.net on port 48015: Done
+[*] 7ffce73dfd68
+[*] 0x7ffce73dfc13
+b'2adf061572f988608288dcbc11a83841\n'
