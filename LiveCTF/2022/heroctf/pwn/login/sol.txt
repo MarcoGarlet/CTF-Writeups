@@ -1,0 +1,8 @@
+1- create a user with name "a", this user has index 0
+2- delete user with index 0
+3- create a user with name "admin", this user has index 1
+4- ask for admin access user 0
+
+5- boom here the flag: 
+Hero{Y0u_w3r3_n0t_supp0s3d_t0_3nt3r!!!}
+
