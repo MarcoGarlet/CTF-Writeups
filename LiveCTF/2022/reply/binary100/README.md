@@ -154,7 +154,7 @@ So the final layout will be:
 and the correct string is: 
 
 ```
-	wBHC6,r/nh0ll/`[-1[_,,hy
+wBHC6,r/nh0ll/`[-1[_,,hy
 ```
 
 As predicted, by inserting the right string, this message was printed out:
@@ -166,9 +166,9 @@ The final puts was followed by a cicle with a call to an internal function:
 
 
 ```
-   for (local_10 = 0;(ulong)(long)local_10 < local_18;local_10 = local_10 + 1) {
-   	FUN_00101188((int)(char)(int)local_918[local_10]);
-   }
+for (local_10 = 0;(ulong)(long)local_10 < local_18;local_10 = local_10 + 1) {
+	FUN_00101188((int)(char)(int)local_918[local_10]);
+}
 ```
 
 ![](./img/img6.png)
