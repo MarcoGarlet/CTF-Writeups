@@ -26,7 +26,7 @@ Here I found also the function that contains the ptrace check and all the checks
 
 ![](./img/img4.png)
 
-Therefore I decided to bypass ptrace checks patching a binary instructions, substituting the JNS instruction with jmp and save the new binary.
+Therefore I decided to bypass ptrace checks patching a binary instructions, substituting the JNS instruction with JMP and save the new binary.
 
 ![](./img/img5.png)
 
