@@ -117,7 +117,7 @@ Here is the output of Z3 script:
  local_918 = 119]
 ```
 
-For local_8e8 only the integer part is considered, which 113.
+For local_8e8 only the integer part is considered, which is 113.
 
 Finally, the last thing to do was to find the right order of each string's character.
 The memory addresses order was decreasing. Moreover, for the first 4 characters (since they are in an array), the order is reversed:
