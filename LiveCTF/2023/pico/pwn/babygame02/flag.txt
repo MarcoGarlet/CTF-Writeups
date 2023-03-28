@@ -1,0 +1,1 @@
+picoCTF{Wh4t_ag4ain!}
