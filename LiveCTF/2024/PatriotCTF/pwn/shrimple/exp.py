@@ -33,4 +33,4 @@ def exploit(start):
     r.interactive()
 
 if __name__ == '__main__':
-    exploit(int(input()))
+    exploit(43)
