@@ -1,0 +1,13 @@
+version: '3'
+services:
+  flask_app:
+    build: ./flask_app
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./flask_app:/app
+    networks:
+      - app_network
+
+networks:
+  app_network:
