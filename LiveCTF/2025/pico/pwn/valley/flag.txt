@@ -1,0 +1,1 @@
+picoctf{f1ckl3_f0rmat_f1asc0}
